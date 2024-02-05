@@ -1,118 +1,127 @@
-import Image from "next/image";
+import { NavBar } from "@/components/NavBar";
 import { Inter } from "next/font/google";
+import { useEffect, useState } from "react";
+import { FaWheelchair } from "react-icons/fa";
+import { MdOutlineWork, MdPersonalInjury } from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const images = ["01.jpg"];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 7000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [images.length]);
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={inter.className}>
+      <NavBar />
+      <div className="w-full overflow-x-hidden h-[87vh] mt-32 relative">
+        <div className="absolute z-10 top-[30%] left-[10%] text-white">
+          <p className="text-6xl [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)]">
+            Harmonizing Interests, Resolving Conflicts
+          </p>
         </div>
+        <div
+          className="flex h-full"
+          style={{
+            transform: `translateX(-${activeIndex * 100}%)`,
+            transition: "transform 0.5s ease-in-out",
+          }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className="min-w-full ">
+              <img
+                src={`images/${image}`}
+                alt={`Image ${index + 1}`}
+                className="object-cover w-full h-full filter  brightness-[40%]"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.3]" />
       </div>
+      <section className="flex items-center w-full  justify-center  py-24">
+        <div className="flex items-center justify-between  w-full max-w-[1000px]">
+          <div className="flex flex-col gap-10 max-w-[500px]">
+            <p className="text-4xl">
+              Mediation: A Path to Early and Satisfactory Resolution
+            </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <p className=" text-slate-800 italic text-lg">
+              &quot;Litigation is expensive, time-consuming, and stressful, with
+              unpredictable outcomes and the potential for lengthy proceedings.
+              As your mediator, I serve as a neutral facilitator to guide
+              constructive settlement negotiations, helping you evaluate risks
+              and explore agreeable resolutions early on. My goal is to achieve
+              a satisfactory resolution that avoids the costs, risks, and stress
+              of ongoing litigation, allowing you to move forward.&quot;
+            </p>
+            <p className=" mb text-xl text-right">~ John Dempster</p>
+          </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <div className="shadow-[#949494] shadow-lg overflow-hidden rounded-md">
+            <img
+              src={`images/lawyer.jpg`}
+              alt={`John Dempster`}
+              className="object-cover h-[440px] w-[440px]  "
+              style={{ objectPosition: "center -20px" }}
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className="py-24 flex items-center justify-center text-slate-100 bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-36"
+        style={{
+          backgroundImage: `url('images/05.jpg')`,
+          clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)",
+        }}
+      >
+        {/* Apply the brown filter behind the content but not on top of the text */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.8]"></div>
+
+        {/* Ensure content is positioned above the filter using relative positioning */}
+        <div className="relative flex flex-col items-start justify-center gap-10 max-w-[1000px] w-full text-xl z-10 [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] leading-relaxed">
+          <p className="text-5xl">About Me</p>
+          <p>
+            I graduated from military college with a Bachelor&apos;s degree in
+            Business Administration in 1985. Following this, I served as an
+            officer in the Canadian Armed Forces until 1990. After completing my
+            military service, I pursued legal studies and graduated from law
+            school. In 1995, I was admitted to the Bar of Ontario, which marked
+            the beginning of my nearly three-decade-long career in litigation.
+            My extensive legal experience has sharpened my expertise and
+            solidified my commitment to maintaining the highest standards of the
+            legal profession.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p>
+            Throughout my distinguished legal career, I have represented clients
+            at all levels of court in Ontario, including the esteemed Ontario
+            Court of Appeal. Additionally, I was appointed as the Deputy
+            Registrar in Bankruptcy in Ottawa, where I presided over various
+            bankruptcy hearings. This role further expanded my expertise and
+            contribution to the field of law, particularly in bankruptcy
+            proceedings.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
+          <p>
+            Over my career as a lawyer, I have represented many different
+            clients and have developed a wide range of experience in various
+            litigation matters.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>My Expertise</h2>
+        </div>
+      </section>
     </main>
   );
 }
