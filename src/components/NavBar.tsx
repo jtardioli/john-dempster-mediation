@@ -9,10 +9,12 @@ const NavBar = () => {
         <Link href="/">Home</Link>
 
         <Link href="/delivery-of-materials">Delivery of Materials</Link>
-        <a href="#">Contact</a>
-        <button className="bg-[#51341c] py-4 px-6 rounded-md text-white">
-          Book Now
-        </button>
+        <Link href="/contact">Contact</Link>
+        <Link href="/book-now">
+          <button className="bg-[#51341c] py-4 px-6 rounded-md text-white">
+            Book Now
+          </button>
+        </Link>
       </div>
     </nav>
   );

@@ -1,21 +1,19 @@
 import { NavBar } from "@/components/NavBar";
+import { Inter } from "next/font/google";
 import React from "react";
+import { InlineWidget } from "react-calendly";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const BookNow = () => {
   return (
-    <main>
+    <main className={inter.className}>
       <NavBar />
-      <section className="mt-32 flex items-center justify-center  ">
-        <div className="w-full max-w-[1000px]">
-          My preference is for the parties to provide me with their mediation
-          briefs and any other materials electronically by email to:
-          jdempster@sympatico.ca If this is not possible, then hard copies of
-          mediation briefs and any other materials can be provide to me by mail
-          or courier at the following address: John D. Dempster 2285 St. Laurent
-          Blvd., Unit D16 Ottawa, ON, K1G 4Z7 Please instruct the courier not to
-          require a signature, and to use the courier chute located beside the
-          front door.
-        </div>
+      <section className="mt-32 flex items-center justify-center bg-slate-100">
+        <InlineWidget
+          styles={{ width: "100%", height: "84vh" }}
+          url="https://calendly.com/johndempster"
+        />
       </section>
     </main>
   );

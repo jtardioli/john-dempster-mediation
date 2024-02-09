@@ -1,8 +1,21 @@
 import { NavBar } from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
-import { FaWheelchair } from "react-icons/fa";
-import { MdOutlineWork, MdPersonalInjury } from "react-icons/md";
+import {
+  FaBuilding,
+  FaGlobeAmericas,
+  FaHouseDamage,
+  FaMapMarkerAlt,
+  FaUserInjured,
+  FaWheelchair,
+} from "react-icons/fa";
+import { FaUserDoctor } from "react-icons/fa6";
+import { GiMoneyStack, GiScreaming } from "react-icons/gi";
+import {
+  MdConstruction,
+  MdMoneyOffCsred,
+  MdRealEstateAgent,
+} from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +34,7 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <main className={inter.className}>
+    <main className={`${inter.className} bg-slate-100 `}>
       <NavBar />
       <div className="w-full overflow-x-hidden h-[87vh] mt-32 relative">
         <div className="absolute z-10 top-[30%] left-[10%] text-white">
@@ -41,14 +54,14 @@ export default function Home() {
               <img
                 src={`images/${image}`}
                 alt={`Image ${index + 1}`}
-                className="object-cover w-full h-full filter  brightness-[40%]"
+                className="object-cover w-full h-full filter  brightness-[100%]"
               />
             </div>
           ))}
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.3]" />
       </div>
-      <section className="flex items-center w-full  justify-center  py-24">
+      <section className="flex items-center w-full  justify-center  py-24 bg-slate-100">
         <div className="flex items-center justify-between  w-full max-w-[1000px]">
           <div className="flex flex-col gap-10 max-w-[500px]">
             <p className="text-4xl">
@@ -78,10 +91,10 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="py-24 flex items-center justify-center text-slate-100 bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-36"
+        className="py-24 flex items-center justify-center text-slate-100  bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-48 "
         style={{
           backgroundImage: `url('images/05.jpg')`,
-          clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%)",
+          clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)",
         }}
       >
         {/* Apply the brown filter behind the content but not on top of the text */}
@@ -117,11 +130,117 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>My Expertise</h2>
+      <section className="flex justify-start items-center flex-col bg-slate-100">
+        <h2 className="text-4xl">Areas of Expertise</h2>
+        <div className="h-[1px] w-full bg-slate-300 my-12"></div>
+        <h3 className="mb-6 text-xl text-[#51341c]">Personal and Injury Law</h3>
+
+        <div className="grid grid-cols-3 gap-4 text-[#51341c]">
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaUserInjured size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Personal Injury</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaWheelchair size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Long Term Disability Claims</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaUserDoctor size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Professional Negligence</p>
+          </div>
+        </div>
+        <div className="h-[1px] w-full bg-slate-300 my-12"></div>
+        <h3 className="mb-6 text-xl text-[#51341c]">
+          Employment and Corporate Law
+        </h3>
+
+        <div className="grid grid-cols-2 gap-4 text-[#51341c]">
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <GiMoneyStack size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Employment Law</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaBuilding size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">
+              Corporate/Commercial Litigation
+            </p>
+          </div>
+        </div>
+
+        <div className="h-[1px] w-full bg-slate-300 my-12"></div>
+        <h3 className="mb-6 text-xl text-[#51341c]">
+          Property and Real Estate Law
+        </h3>
+        <div className="grid grid-cols-2 gap-4 text-[#51341c]">
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaMapMarkerAlt size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Land Development</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <MdRealEstateAgent size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Estate Litigation</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <GiScreaming size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Landlord Tenant Disputes</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaHouseDamage size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">
+              Property Damage and Insurance Claims
+            </p>
+          </div>
+        </div>
+        <div className="h-[1px] w-full bg-slate-300 my-12"></div>
+
+        <h3 className="mb-6 text-xl text-[#51341c]">
+          Civil and Commercial Litigation
+        </h3>
+        <div className="grid grid-cols-3 gap-4 text-[#51341c]">
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <FaGlobeAmericas size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Environmental Law</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <MdConstruction size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Construction Law</p>
+          </div>
+          <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+            <div className="p-4 rounded-full bg-[#51341c] ">
+              <MdMoneyOffCsred size={52} color="white" />
+            </div>
+            <p className="text-lg tracking-wide">Bankruptcy Law</p>
+          </div>
         </div>
       </section>
+      <footer
+        className="bg-[#51341c] h-[30vh] mt-24"
+        style={{
+          clipPath: "polygon(0 10%, 15% 0, 86% 0, 100% 10%, 100% 100%, 0 100%)",
+        }}
+      ></footer>
     </main>
   );
 }
