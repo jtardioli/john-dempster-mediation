@@ -1,9 +1,12 @@
 import { NavBar } from "@/components/NavBar";
+import { Inter } from "next/font/google";
 import React from "react";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const DeliveryOfMaterials = () => {
   return (
-    <main>
+    <main className={inter.className}>
       <NavBar />
       <section className="mt-32 flex items-center justify-center  ">
         <div className="w-full max-w-[1000px]">
