@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <main className={`${inter.className} bg-slate-100`}>
       <NavBar />
-      <div className="w-full overflow-x-hidden h-[68vh] mt-32 relative">
+      <div className="w-full overflow-x-hidden h-[86vh] relative">
         <div className="absolute z-10 top-[30%] left-[10%] text-white">
           <p className="text-6xl [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)]">
             Harmonizing Interests, Resolving Conflicts

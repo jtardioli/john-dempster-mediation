@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-1 items-center justify-center">
           <Link href="/book-now">
-            <button className="text-darkPrimary font-semibold tracking-wider bg-slate-100 py-4 px-6 rounded-md text-xl font-medium">
+            <button className="text-darkPrimary font-semibold tracking-wider bg-slate-100 py-4 px-6 rounded-md text-xl hover:brightness-90">
               Book Now
             </button>
           </Link>

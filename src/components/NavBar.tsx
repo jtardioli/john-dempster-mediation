@@ -38,18 +38,27 @@ const NavBar = () => {
         className=" size-52 mt-6"
       />
       <div className="flex items-center gap-12 text-[1.25rem] font-medium tracking-wider">
-        <Link className="hover:text-primary" href="/">
+        <Link
+          className={isScrolled ? "hover:underline" : "hover:text-primary"}
+          href="/"
+        >
           Home
         </Link>
-        <Link className="hover:text-primary" href="/delivery-of-materials">
+        <Link
+          className={isScrolled ? "hover:underline" : "hover:text-primary"}
+          href="/delivery-of-materials"
+        >
           Delivery of Materials
         </Link>
-        <Link className="hover:text-primary" href="/contact">
+        <Link
+          className={isScrolled ? "hover:underline" : "hover:text-primary"}
+          href="/contact"
+        >
           Contact
         </Link>
         <Link href="/book-now">
           <button
-            className={`py-4 px-6 rounded-md font-semibold tracking-wider ${
+            className={`py-4 px-6 rounded-md font-semibold tracking-wider hover:brightness-125 ${
               isScrolled ? "bg-darkPrimary text-white" : "bg-white text-black"
             } `}
           >
