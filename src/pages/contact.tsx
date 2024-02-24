@@ -22,11 +22,11 @@ const Contact = () => {
             <img
               src={`images/03.jpg`}
               alt={`Image`}
-              className="object-cover w-full h-full filter  brightness-[100%]"
+              className="object-cover w-full h-full filter  brightness-[70%]"
             />
           </div>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.3]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.5]" />
       </div>
 
       <section className=" flex flex-col items-center justify-center p-6 gap-10 py-20">
@@ -115,7 +115,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <button className="bg-[#51341c] py-3 px-6 rounded-md text-white mt-[-15px] w-[120px] text-lg">
+              <button className="bg-primary py-3 px-6 rounded-md text-white mt-[-15px] w-[120px] text-lg">
                 Send
               </button>
             </div>

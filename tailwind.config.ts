@@ -16,6 +16,11 @@ const config: Config = {
       fontFamily: {
         tangerine: ["Tangerine", "cursive"],
       },
+      colors: {
+        primary: "#EBBC74", // Yale Blue as an example
+        secondary: "#31485a",
+        darkPrimary: "#2e1e11",
+      },
     },
   },
   plugins: [],

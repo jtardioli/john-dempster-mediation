@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      className="bg-[#2d1c0e] h-[30vh]  flex items-center justify-center text-white w-full"
+      className="bg-darkPrimary h-[30vh]  flex items-center justify-center text-white w-full"
       // style={{
       //   clipPath: "polygon(0 10%, 15% 0, 86% 0, 100% 10%, 100% 100%, 0 100%)",
       // }}
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-1 items-center justify-center">
           <Link href="/book-now">
-            <button className="text-[#51341c] bg-slate-100 py-4 px-6 rounded-md text-xl font-medium">
+            <button className="text-darkPrimary font-semibold tracking-wider bg-slate-100 py-4 px-6 rounded-md text-xl font-medium">
               Book Now
             </button>
           </Link>

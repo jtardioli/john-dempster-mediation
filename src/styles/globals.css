@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-bg-filter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://images.pexels.com/photos/220885/pexels-photo-220885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-position: 30% 30%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+  z-index: -1;
+}
