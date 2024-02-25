@@ -1,10 +1,11 @@
 import Footer from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { Inter } from "next/font/google";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaPhone } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { Oval } from "react-loader-spinner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,11 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const onSubmit = async (data: any) => {
     try {
+      setIsLoading(true);
       const response = await fetch(
         "https://formsubmit.co/joshua.tardioli@gmail.com",
         {
@@ -36,6 +40,8 @@ const Contact = () => {
       }
     } catch (error) {
       console.error("Network error:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -76,7 +82,7 @@ const Contact = () => {
       </div>
 
       <section
-        className=" flex flex-col items-center justify-center px-6 gap-10 py-16 bg-white"
+        className=" flex flex-col items-center justify-center px-20 gap-10 py-16 bg-white"
         style={{
           backgroundImage: `url('images/pexels-photo-5485125.jpeg')`,
           backgroundPosition: "80% 0%", // Adjust this value to move the image
@@ -136,7 +142,7 @@ const Contact = () => {
                   {...register("firstName", {
                     required: "First name is required",
                   })}
-                  className={`p-3 outline-none rounded-md shadow-inner${
+                  className={`p-3 outline-none rounded-md shadow-inner ${
                     errors.firstName
                       ? "border-[1px] border-red-800"
                       : "border-[1px] border-slate-300"
@@ -252,7 +258,7 @@ const Contact = () => {
                 type="submit"
                 className="bg-darkPrimary py-3 px-6 rounded-md text-white w-[120px] text-xl mt-4 tracking-widest font-medium"
               >
-                Send
+                {isLoading ? <Oval /> : "Send"}
               </button>
             </div>
           </form>
