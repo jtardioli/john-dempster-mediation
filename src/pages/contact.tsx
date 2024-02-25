@@ -15,7 +15,7 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     try {
       const response = await fetch(
         "https://formsubmit.co/joshua.tardioli@gmail.com",
