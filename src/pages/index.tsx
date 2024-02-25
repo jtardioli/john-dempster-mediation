@@ -32,18 +32,18 @@ export default function Home() {
           </p>
           <div className="flex items-center justify-center space-x-4 mt-4">
             <div className="flex flex-col gap-2 items-end">
-              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white"></div>
-              <div className="w-64 h-[2px] bg-gradient-to-r from-transparent to-white"></div>
-              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
+              <div className="w-64 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
             </div>
 
             <p className="text-5xl text-primary tracking-widest font-bold">
               Mediation
             </p>
             <div className="flex flex-col gap-2 items-start">
-              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white"></div>
-              <div className="w-64 h-[2px] bg-gradient-to-l from-transparent to-white"></div>
-              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
+              <div className="w-64 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
             </div>
           </div>
         </div>
@@ -68,11 +68,11 @@ export default function Home() {
             <p className=" text-slate-800 italic text-lg">
               &quot;Litigation is expensive, time-consuming, and stressful, with
               unpredictable outcomes and the potential for lengthy proceedings.
-              As your mediator, I serve as a neutral facilitator to guide
-              constructive negotiations, helping you evaluate risks and explore
-              agreeable resolutions early on. My goal is to achieve a
-              satisfactory resolution that avoids the costs and risks, of
-              ongoing litigation, allowing you to move forward.&quot;
+              As your mediator, I serve as a neutral actor to guide constructive
+              negotiations, helping you evaluate risks and explore agreeable
+              resolutions early on. My goal is to achieve a satisfactory
+              resolution that avoids the costs and risks, of litigation,
+              allowing you to move forward.&quot;
             </p>
             <p className=" mt-2 text-[2.6rem] text-right font-tangerine font-bold">
               ~ John Dempster
@@ -184,7 +184,7 @@ export default function Home() {
             backdropFilter: "brightness(50%)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.7] -z-10"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.7] -z-10"></div>
 
           <h3 className="mb-6 text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
             Employment and Corporate Law
@@ -218,7 +218,7 @@ export default function Home() {
             backdropFilter: "brightness(50%)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.6] -z-10"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.6] -z-10"></div>
 
           <h3 className="mb-6  text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
             Property and Real Estate Law

@@ -2,25 +2,71 @@ import Footer from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { Inter } from "next/font/google";
 import React from "react";
+import { useForm } from "react-hook-form";
 import { FaPhone } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/joshua.tardioli@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+        console.log("Form submitted successfully");
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    }
+  };
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
   return (
     <main className={`${inter.className} bg-slate-100`}>
       <NavBar />
       <div className="w-full overflow-x-hidden h-[86vh] relative">
-        <div className="absolute z-10 top-[30%] left-[10%] text-white">
-          <p className="text-6xl [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)]">
-            Harmonizing Interests, Resolving Conflicts
-          </p>
+        <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
+          <div className="flex items-center justify-center space-x-4 mt-4">
+            <div className="flex flex-col gap-2 items-end">
+              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
+              <div className="w-64 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
+            </div>
+
+            <p className="text-7xl text-primary tracking-widest font-bold">
+              Contact
+            </p>
+            <div className="flex flex-col gap-2 items-start">
+              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
+              <div className="w-64 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
+              <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
+            </div>
+          </div>
         </div>
         <div className="flex h-full">
           <div className="min-w-full ">
             <img
-              src={`images/03.jpg`}
+              src={`images/01.jpg`}
               alt={`Image`}
               className="object-cover w-full h-full filter  brightness-[70%]"
             />
@@ -29,19 +75,31 @@ const Contact = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.5]" />
       </div>
 
-      <section className=" flex flex-col items-center justify-center p-6 gap-10 py-20">
+      <section
+        className=" flex flex-col items-center justify-center px-6 gap-10 py-16 bg-white"
+        style={{
+          backgroundImage: `url('images/pexels-photo-5485125.jpeg')`,
+          backgroundPosition: "80% 0%", // Adjust this value to move the image
+          backdropFilter: "brightness(10%)",
+          backgroundSize: "130%",
+        }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-[#c7c7c7] opacity-[0.1] -z-10"></div>
+
         <div className="flex justify-between gap-12 w-full px-40">
           <div className="flex flex-col justify-start items-start gap-8 text-lg  flex-1">
-            <h2 className="text-3xl">Get In Touch</h2>
+            <h2 className="text-3xl font-semibold tracking-wider ">
+              Get In Touch
+            </h2>
 
-            <div className="flex flex-col gap-2">
-              <p className=" font-semibold">Address:</p>
+            <div className="flex flex-col gap-2 text-slate-800">
+              <p className=" font-semibold text-slate-900">Address:</p>
               <p>2285 St. Laurent Blvd, Ottawa</p>
               <p>Ottawa, Ontario K1G 4Z7, Canada</p>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <p className="font-semibold">Contact Details:</p>
+            <div className="flex flex-col gap-2 text-slate-800">
+              <p className="font-semibold text-slate-900">Contact Details:</p>
               <p>
                 Phone:{" "}
                 <a className="hover:underline" href="tel:+16137299704">
@@ -59,63 +117,141 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <form className=" flex flex-col gap-10 flex-1 ">
-            <h2 className="text-3xl">Contact John Dempster Today</h2>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-4 flex-1"
+          >
+            <h2 className="text-3xl font-semibold tracking-wider mb-3">
+              Contact John Dempster Today
+            </h2>
+
+            {/* First and Last Name */}
             <div className="flex gap-2 w-full">
-              <div className="flex flex-col gap-3 w-full">
-                <label className=" text-slate-600" htmlFor="firstName">
+              {/* First Name */}
+              <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="firstName" className="text-slate-800">
                   First Name
                 </label>
                 <input
-                  className="p-3 outline-none rounded-md shadow-inner border-[1px] border-slate-400 w-full"
+                  {...register("firstName", {
+                    required: "First name is required",
+                  })}
+                  className={`p-3 outline-none rounded-md shadow-inner${
+                    errors.firstName
+                      ? "border-[1px] border-red-800"
+                      : "border-[1px] border-slate-300"
+                  } w-full`}
                   type="text"
-                  id="firstName"
                 />
+                {errors.firstName && (
+                  <p className="text-red-800 text-sm">
+                    {errors.firstName.message as string}
+                  </p>
+                )}
               </div>
-              <div className="flex flex-col gap-3 w-full">
-                <label className=" text-slate-600" htmlFor="lastName">
+
+              {/* Last Name */}
+              <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="lastName" className="text-slate-800">
                   Last Name
                 </label>
                 <input
-                  className="p-3 outline-none rounded-md shadow-inner border-[1px] border-slate-400 w-full"
+                  {...register("lastName", {
+                    required: "Last name is required",
+                  })}
+                  className={`p-3 outline-none rounded-md shadow-inner ${
+                    errors.lastName
+                      ? "border-[1px] border-red-800"
+                      : "border-[1px] border-slate-300"
+                  } w-full`}
                   type="text"
-                  id="lastName"
                 />
-              </div>
-            </div>
-            <div className="flex gap-2 w-full">
-              <div className="flex flex-col gap-3 w-full">
-                <label className="text-slate-600" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="p-3 outline-none rounded-md shadow-inner border-[1px] border-slate-400 w-full"
-                  type="email"
-                  id="email"
-                />
-              </div>
-              <div className="flex flex-col gap-3 w-full">
-                <label className=" text-slate-600" htmlFor="phoneNumber">
-                  Phone Number
-                </label>
-                <input
-                  className="p-3 outline-none rounded-md shadow-inner border-[1px] border-slate-400 w-full"
-                  id="phoneNumber"
-                />
+                {errors.lastName && (
+                  <p className="text-red-800 text-sm">
+                    {errors.lastName.message as string}
+                  </p>
+                )}
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <label className=" text-slate-600" htmlFor="message">
+            {/* Email and Phone */}
+            <div className="flex gap-2 w-full">
+              {/* Email */}
+              <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="email" className="text-slate-800">
+                  Email
+                </label>
+                <input
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: emailRegex,
+                      message: "Invalid email address",
+                    },
+                  })}
+                  className={`p-3 outline-none rounded-md shadow-inner ${
+                    errors.email
+                      ? "border-[1px] border-red-800"
+                      : "border-[1px] border-slate-300"
+                  } w-full`}
+                  type="email"
+                />
+                {errors.email && (
+                  <p className="text-red-800 text-sm">
+                    {errors.email.message as string}
+                  </p>
+                )}
+              </div>
+
+              {/* Phone Number */}
+              <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="phoneNumber" className="text-slate-800">
+                  Phone Number
+                </label>
+                <input
+                  {...register("phoneNumber", {
+                    required: "Phone number is required",
+                  })}
+                  className={`p-3 outline-none rounded-md shadow-inner ${
+                    errors.phoneNumber
+                      ? "border-[1px] border-red-800"
+                      : "border-[1px] border-slate-300"
+                  } w-full`}
+                />
+                {errors.phoneNumber && (
+                  <p className="text-red-800 text-sm">
+                    {errors.phoneNumber.message as string}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col gap-2">
+              <label htmlFor="message" className="text-slate-800">
                 Message
               </label>
               <textarea
-                className="p-3 outline-none rounded-md shadow-inner border-[1px] border-slate-400 min-h-44"
-                id="message"
+                {...register("message", { required: "Message is required" })}
+                className={`p-3 outline-none rounded-md shadow-inner ${
+                  errors.message
+                    ? "border-[1px] border-red-800"
+                    : "border-[1px] border-slate-300"
+                } min-h-32`}
               />
+              {errors.message && (
+                <p className="text-red-800 text-sm">
+                  {errors.message.message as string}
+                </p>
+              )}
             </div>
+
+            {/* Submit Button */}
             <div>
-              <button className="bg-primary py-3 px-6 rounded-md text-white mt-[-15px] w-[120px] text-lg">
+              <button
+                type="submit"
+                className="bg-darkPrimary py-3 px-6 rounded-md text-white w-[120px] text-xl mt-4 tracking-widest font-medium"
+              >
                 Send
               </button>
             </div>

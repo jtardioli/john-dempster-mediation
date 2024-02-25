@@ -58,8 +58,10 @@ const NavBar = () => {
         </Link>
         <Link href="/book-now">
           <button
-            className={`py-4 px-6 rounded-md font-semibold tracking-wider hover:brightness-125 ${
-              isScrolled ? "bg-darkPrimary text-white" : "bg-white text-black"
+            className={`py-4 px-6 rounded-md font-semibold tracking-wider  ${
+              isScrolled
+                ? "bg-darkPrimary text-white hover:brightness-125"
+                : "bg-white text-black hover:brightness-90"
             } `}
           >
             Book Now
