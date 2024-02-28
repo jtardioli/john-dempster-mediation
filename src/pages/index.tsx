@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   FaBuilding,
+  FaGavel,
   FaGlobeAmericas,
   FaHouseDamage,
   FaMapMarkerAlt,
@@ -12,12 +13,14 @@ import {
   FaWheelchair,
 } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
-import { GiMoneyStack, GiScreaming } from "react-icons/gi";
+import { GiFamilyHouse, GiMoneyStack, GiScreaming } from "react-icons/gi";
 import {
+  MdAutoGraph,
   MdConstruction,
   MdMoneyOffCsred,
   MdRealEstateAgent,
 } from "react-icons/md";
+import { VscGraphLine } from "react-icons/vsc";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -67,12 +70,14 @@ export default function Home() {
 
             <p className=" text-slate-800 italic text-lg">
               &quot;Litigation is expensive, time-consuming, and stressful, with
-              unpredictable outcomes and the potential for lengthy proceedings.
-              As your mediator, I serve as a neutral actor to guide constructive
-              negotiations, helping you evaluate risks and explore agreeable
-              resolutions early on. My goal is to achieve a satisfactory
-              resolution that avoids the costs and risks, of litigation,
-              allowing you to move forward.&quot;
+              outcomes that are difficult to predict and the potential for
+              lengthy proceedings that carry a great deal of risk. As your
+              mediator, I serve as a neutral facilitator of constructive
+              settlement negotiations, helping you discuss and assess the costs
+              and risks of your case and explore agreeable resolutions early on.
+              My goal is to achieve a satisfactory resolution that avoids the
+              costs and risks of ongoing litigation, allowing you to move
+              forward.&quot;
             </p>
             <p className=" mt-2 text-[2.6rem] text-right font-tangerine font-bold">
               ~ John Dempster
@@ -81,10 +86,10 @@ export default function Home() {
 
           <div className="shadow-[#949494] shadow-lg overflow-hidden rounded-md">
             <img
-              src={`https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+              src={`images/John-Dempster-Large.jpg`}
               alt={`John Dempster`}
               className="object-cover h-[440px] w-[440px]  "
-              style={{ objectPosition: "center -20px" }}
+              style={{ objectPosition: "center -60px" }}
             />
           </div>
         </div>
@@ -109,25 +114,22 @@ export default function Home() {
             Business Administration in 1985. Following this, I served as an
             officer in the Canadian Armed Forces until 1990. After completing my
             military service, I pursued legal studies and graduated from law
-            school. In 1995, I was admitted to the Bar of Ontario, which marked
-            the beginning of my nearly three-decade-long career in litigation.
-            My extensive legal experience has sharpened my expertise and
-            solidified my commitment to maintaining the highest standards of the
-            legal profession.
+            school. In 1995, I was called to the Bar of Ontario which marked the
+            beginning of my nearly three-decade-long career in litigation.
           </p>
           <p>
-            Throughout my distinguished legal career, I have represented clients
-            at all levels of court in Ontario, including the esteemed Ontario
-            Court of Appeal. Additionally, I was appointed as the Deputy
-            Registrar in Bankruptcy in Ottawa, where I presided over various
-            bankruptcy hearings. This role further expanded my expertise and
-            contribution to the field of law, particularly in bankruptcy
-            proceedings.
+            Over my career as a litigation lawyer, I have represented clients at
+            all levels of court in Ontario, including the Ontario Court of
+            Appeal. Additionally, I was appointed as the Deputy Registrar in
+            Bankruptcy in Ottawa, where I presided over various bankruptcy
+            hearings.
           </p>
           <p>
-            Over my career as a lawyer, I have represented many different
-            clients and have developed a wide range of experience in various
-            litigation matters.
+            I have represented many different clients and have developed a wide
+            range of experience in various litigation matters in various
+            practice areas. Over the years, I have participated in many
+            mediations in all of these practice areas. I am a strong believer in
+            mediation and achieving early resolution of claims.
           </p>
         </div>
       </section>
@@ -146,11 +148,7 @@ export default function Home() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.6] -z-10"></div>
 
-          <h3 className="mb-6 text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
-            Personal and Injury Law
-          </h3>
-
-          <div className="grid grid-cols-3 gap-4 text-darkPrimary font-semibold">
+          <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
                 <FaUserInjured size={52} color="white" />
@@ -164,12 +162,6 @@ export default function Home() {
               <p className="text-lg tracking-wide">
                 Long Term Disability Claims
               </p>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
-              <div className="p-4 rounded-full bg-darkPrimary ">
-                <FaUserDoctor size={52} color="white" />
-              </div>
-              <p className="text-lg tracking-wide">Professional Negligence</p>
             </div>
           </div>
         </div>
@@ -186,10 +178,7 @@ export default function Home() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.7] -z-10"></div>
 
-          <h3 className="mb-6 text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
-            Employment and Corporate Law
-          </h3>
-
+          {/* First */}
           <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
@@ -199,15 +188,26 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
-                <FaBuilding size={52} color="white" />
+                <MdRealEstateAgent size={52} color="white" />
               </div>
-              <p className="text-lg tracking-wide">
-                Corporate/Commercial Litigation
-              </p>
+              <p className="text-lg tracking-wide">Estate Litigation</p>
+            </div>
+            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+              <div className="p-4 rounded-full bg-darkPrimary ">
+                <FaGavel size={52} color="white" />
+              </div>
+              <p className="text-lg tracking-wide">Professional Negligence</p>
+            </div>
+            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+              <div className="p-4 rounded-full bg-darkPrimary ">
+                <MdMoneyOffCsred size={52} color="white" />
+              </div>
+              <p className="text-lg tracking-wide">Bankruptcy Law</p>
             </div>
           </div>
         </div>
 
+        {/* Second */}
         <div
           className="flex flex-col items-center w-full h-full py-16 "
           style={{
@@ -220,9 +220,6 @@ export default function Home() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.6] -z-10"></div>
 
-          <h3 className="mb-6  text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
-            Property and Real Estate Law
-          </h3>
           <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
@@ -232,15 +229,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
-                <MdRealEstateAgent size={52} color="white" />
+                <FaGlobeAmericas size={52} color="white" />
               </div>
-              <p className="text-lg tracking-wide">Estate Litigation</p>
-            </div>
-            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
-              <div className="p-4 rounded-full bg-darkPrimary ">
-                <GiScreaming size={52} color="white" />
-              </div>
-              <p className="text-lg tracking-wide">Landlord Tenant Disputes</p>
+              <p className="text-lg tracking-wide">Environmental Law</p>
             </div>
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
@@ -250,8 +241,19 @@ export default function Home() {
                 Property Damage and Insurance Claims
               </p>
             </div>
+
+            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
+              <div className="p-4 rounded-full bg-darkPrimary ">
+                <GiFamilyHouse size={52} color="white" />
+              </div>
+              <p className="text-lg tracking-wide">
+                Condominium Law & Commercial Lease
+              </p>
+            </div>
           </div>
         </div>
+
+        {/* Third */}
 
         <div
           className="flex flex-col items-center w-full h-full py-24 "
@@ -265,16 +267,7 @@ export default function Home() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.4] -z-10"></div>
 
-          <h3 className="mb-6  text-2xl text-white font-bold tracking-wider [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
-            Civil and Commercial Litigation
-          </h3>
-          <div className="grid grid-cols-3 gap-4 text-darkPrimary font-semibold ">
-            <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
-              <div className="p-4 rounded-full bg-darkPrimary ">
-                <FaGlobeAmericas size={52} color="white" />
-              </div>
-              <p className="text-lg tracking-wide">Environmental Law</p>
-            </div>
+          <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold ">
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
                 <MdConstruction size={52} color="white" />
@@ -283,9 +276,11 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-white shadow-[#949494] shadow-sm px-10 py-6 rounded-md gap-3">
               <div className="p-4 rounded-full bg-darkPrimary ">
-                <MdMoneyOffCsred size={52} color="white" />
+                <MdAutoGraph size={52} color="white" />
               </div>
-              <p className="text-lg tracking-wide">Bankruptcy Law</p>
+              <p className="text-lg tracking-wide">
+                Commercial Litigation and Shareholder Disputes
+              </p>
             </div>
           </div>
         </div>
