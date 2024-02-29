@@ -86,10 +86,13 @@ export default function Home() {
 
           <div className="shadow-[#949494] shadow-lg overflow-hidden rounded-md">
             <img
-              src={`images/John-Dempster-Large.jpg`}
+              src={`images/headshot.jpg`}
               alt={`John Dempster`}
               className="object-cover h-[440px] w-[440px]  "
-              style={{ objectPosition: "center -60px" }}
+              style={{
+                objectPosition: "-10px 20px",
+                transform: "scale(1.3)",
+              }}
             />
           </div>
         </div>
@@ -238,7 +241,7 @@ export default function Home() {
                 <FaHouseDamage size={52} color="white" />
               </div>
               <p className="text-lg tracking-wide">
-                Property Damage and Insurance Claims
+                Property Damage & Insurance Claims
               </p>
             </div>
 
@@ -279,7 +282,7 @@ export default function Home() {
                 <MdAutoGraph size={52} color="white" />
               </div>
               <p className="text-lg tracking-wide">
-                Commercial Litigation and Shareholder Disputes
+                Commercial Litigation & Shareholder Disputes
               </p>
             </div>
           </div>

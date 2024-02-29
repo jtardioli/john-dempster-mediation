@@ -128,7 +128,7 @@ const Contact = () => {
             className="flex flex-col gap-4 flex-1"
           >
             <h2 className="text-3xl font-semibold tracking-wider mb-3">
-              Contact John Dempster Today
+              Contact John Dempster
             </h2>
 
             {/* First and Last Name */}
@@ -256,9 +256,18 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="bg-darkPrimary py-3 px-6 rounded-md text-white w-[120px] text-xl mt-4 tracking-widest font-medium"
+                className="bg-darkPrimary py-3 px-6 rounded-md text-white w-[120px] text-xl mt-4 tracking-widest font-medium flex justify-center h-12 items-center"
               >
-                {isLoading ? <Oval /> : "Send"}
+                {isLoading ? (
+                  <Oval
+                    color="white"
+                    secondaryColor="#ccc"
+                    height="30"
+                    width="30"
+                  />
+                ) : (
+                  "Send"
+                )}
               </button>
             </div>
           </form>
