@@ -57,7 +57,7 @@ const DeliveryOfMaterials = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold">
-              In person mediations in the Eastern Region outside Ottawa
+              Mediations in the Eastern Region outside Ottawa
             </h2>
             <p>
               For in person mediations in the Eastern Region but outside of
@@ -71,7 +71,7 @@ const DeliveryOfMaterials = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold">
-              In person mediations outside the Eastern Region
+              Mediations outside the Eastern Region
             </h2>
             <p>
               For in person mediations outside of the Eastern Region, the fee as
@@ -82,7 +82,7 @@ const DeliveryOfMaterials = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold">
-              Premium for Multiple Actions or Parties
+              Premium for multiple actions or parties
             </h2>
             <p>
               For mediations involving more than one action, global mediations
