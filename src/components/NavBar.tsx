@@ -52,6 +52,18 @@ const NavBar = () => {
         </Link>
         <Link
           className={isScrolled ? "hover:underline" : "hover:text-primary"}
+          href="/rates-and-cancellation"
+        >
+          Rates
+        </Link>
+        <Link
+          className={isScrolled ? "hover:underline" : "hover:text-primary"}
+          href="/rates"
+        >
+          Rates2
+        </Link>
+        <Link
+          className={isScrolled ? "hover:underline" : "hover:text-primary"}
           href="/contact"
         >
           Contact
