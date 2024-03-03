@@ -44,6 +44,9 @@ const DeliveryOfMaterials = () => {
           <p>
             My preference is for the parties to provide me with their mediation
             briefs and any other materials electronically by email to:{" "}
+          </p>
+          <p>
+            {" "}
             <strong>
               {" "}
               <a
