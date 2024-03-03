@@ -33,11 +33,11 @@ const DeliveryOfMaterials = () => {
             <img
               src={`images/files.jpg`}
               alt={`Image`}
-              className="object-cover w-full h-full filter  brightness-[70%]"
+              className="object-cover w-full h-full filter  brightness-[30%]"
             />
           </div>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.7]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.4]" />
       </div>
       <section className="flex items-center justify-center">
         <div className="w-full max-w-[800px] py-20 text-lg flex flex-col gap-6">
