@@ -37,51 +37,142 @@ const DeliveryOfMaterials = () => {
             />
           </div>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.5]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.7]" />
       </div>
       <section className="flex items-center justify-center px-20 gap-10 py-16">
         <div className="w-full max-w-[1000px] flex flex-col gap-10">
-          <h1 className="text-4xl font-bold">Mediation Rates</h1>
-          <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold">
+          <div className="flex flex-col gap-4 items-center">
+            <h2 className="text-4xl tracking-wide font-semibold">
               Mediations in Ottawa or Virtually
             </h2>
-            <p>
-              The fee for a half day mediation of up to 3 hours is $1,500.00
-              plus HST, and the fee for a full day mediation of up to 6 hours is
-              $2,500.00 plus HST. These fees are inclusive of preparation time
-              prior to the mediation. Any additional time beyond the scheduled
-              mediation will be charged at $400.00 per hour plus HST.
+            <div className="flex justify-center items-center space-x-8 p-8 bg-white">
+              {/* Half Day Mediation Card */}
+              <div
+                className="flex-1 transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden border-[1px border-[#e0c78d]]"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)",
+                }}
+              >
+                <div className="p-8 ">
+                  <h2 className="text-2xl font-semibold text-extraDarkPrimary mb-2 tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_10%)]">
+                    Half Day Mediation
+                  </h2>
+                  <p className="text-sm font-medium text-slate-800 mb-4">
+                    Up to 3 hours
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <p className="text-4xl font-bold text-darkPrimary tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_20%)]">
+                      $1,500.00
+                    </p>
+                    <p className="text-xs  text-slate-800">*Before Tax</p>
+                  </div>
+                </div>
+                <div className="px-8 py-4 ">
+                  <p className="text-sm text-extraDarkPrimary italic">
+                    For those who seek a prompt, yet thorough, resolution to
+                    their disputes.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="flex-1 transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden border-[1px] border-[#e0c78d]"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)",
+                }}
+              >
+                <div className="p-8 ">
+                  <h2 className="text-2xl font-semibold text-extraDarkPrimary mb-2 tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_10%)]">
+                    Full Day Mediation
+                  </h2>
+                  <p className="text-sm font-medium text-slate-800 mb-4">
+                    Up to 6 hours
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <p className="text-4xl font-bold text-darkPrimary tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_20%)]">
+                      $2,500.00
+                    </p>
+                    <p className="text-xs  text-slate-800">*Before Tax</p>
+                  </div>
+                </div>
+                <div className="px-8 py-4 ">
+                  <p className="text-sm text-extraDarkPrimary italic">
+                    Comprehensive day-long mediation to resolve complex
+                    disputes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-slate-600 text-xs">
+              *Additional time beyond the scheduled mediation will be charged at
+              $400.00 per hour plus HST.
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold">
+          <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
+
+          <div className="flex flex-col gap-4 items-center">
+            <h2 className="text-4xl tracking-wide font-semibold">
               Mediations in the Eastern Region outside Ottawa
             </h2>
-            <p>
-              For in person mediations in the Eastern Region but outside of
-              Ottawa, the fee is $2,800.00 plus HST for a full day mediation of
-              up to 6 hours. This fee is inclusive of travel time and
-              preparation time prior to the mediation. Any additional time
-              beyond the scheduled mediation will be charged at $400.00 per hour
-              plus HST.
+            <div className="flex justify-center items-center space-x-8 p-8 bg-white">
+              {/* Full Day Mediation Card */}
+              <div
+                className="transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden  max-w-[580px] relative bg-cover"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at center, #402a18 10%, #2e1e11 150%)",
+                }}
+              >
+                <div className="p-8">
+                  <h2
+                    className="text-2xl font-semibold text-[#fceecd] mb-2 tracking-wide"
+                    style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.6)" }}
+                  >
+                    Full Day Mediation
+                  </h2>
+                  <p className="text-sm font-medium text-[#F0E2BE] mb-4">
+                    Up to 6 hours
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <p
+                      className="text-4xl font-bold text-[#fceecd] tracking-wide"
+                      style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.8)" }}
+                    >
+                      $2,800.00
+                    </p>
+                    <p className="text-xs text-[#F0E2BE]">*Before Tax</p>
+                  </div>
+                </div>
+                <div className="px-8 py-4">
+                  <p className="text-sm text-[#e4d7b6] italic">
+                    Comprehensive day-long mediation in the eastern region
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-center text-slate-600 text-xs">
+              *Additional time beyond the scheduled mediation will be charged at
+              $400.00 per hour plus HST.
             </p>
           </div>
 
+          <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
+
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-2xl font-semibold">
               Mediations outside the Eastern Region
             </h2>
             <p>
-              For in person mediations outside of the Eastern Region, the fee as
-              well as any travel/accommodation expenses will be discussed and
-              agreed to between the parties and the mediator.
+              The fee, as well as any travel/accommodation expenses will be
+              discussed and agreed to between the parties and the mediator.
             </p>
           </div>
 
           <div className="flex flex-col gap-4">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-2xl font-semibold">
               Premium for multiple actions or parties
             </h2>
             <p>
@@ -92,13 +183,13 @@ const DeliveryOfMaterials = () => {
             </p>
           </div>
 
+          <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
+
           <h1 className="text-4xl font-bold">Cancellation Fees</h1>
           <p>
             For mediations in Ottawa, the Eastern Region or virtually, if the
-            mediation is cancelled more than 15 days before the scheduled date,
-            there will be no cancellation fee. However, if the mediation is
-            cancelled within 15 days of the scheduled date, there will be a
-            cancellation fee of 50% of the mediation fee plus HST.
+            mediation is cancelled within 15 days of the scheduled date, there
+            will be a cancellation fee of 50% of the mediation fee.
           </p>
           <p>
             For in person mediations outside the Eastern Region, the
@@ -106,6 +197,9 @@ const DeliveryOfMaterials = () => {
             incurred for travel or accommodation, will be discussed and agreed
             to between the parties and the mediator.
           </p>
+
+          <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
+
           <h1 className="text-4xl font-bold">Payment of Accounts:</h1>
           <p>
             Unless otherwise discussed and agreed in advance between the parties

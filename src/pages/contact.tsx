@@ -19,10 +19,11 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data: any) => {
+    console.log(data);
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://formsubmit.co/joshua.tardioli@gmail.com",
+        "https://formsubmit.co/jdempster@sympatico.ca",
         {
           method: "POST",
           headers: {
@@ -86,12 +87,9 @@ const Contact = () => {
         style={{
           backgroundImage: `url('images/pexels-photo-5485125.jpeg')`,
           backgroundPosition: "80% 0%", // Adjust this value to move the image
-          backdropFilter: "brightness(10%)",
           backgroundSize: "130%",
         }}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-[#c7c7c7] opacity-[0.1] -z-10"></div>
-
         <div className="flex justify-between gap-12 w-full px-40">
           <div className="flex flex-col justify-start items-start gap-8 text-lg  flex-1">
             <h2 className="text-3xl font-semibold tracking-wider ">
@@ -270,6 +268,12 @@ const Contact = () => {
                 )}
               </button>
             </div>
+            <input
+              {...register("_captcha")}
+              type="hidden"
+              name="_captcha"
+              value="false"
+            ></input>
           </form>
         </div>
       </section>
