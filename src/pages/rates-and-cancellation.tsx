@@ -42,7 +42,7 @@ const DeliveryOfMaterials = () => {
       <section className="flex items-center justify-center px-20 gap-10 py-16">
         <div className="w-full max-w-[1000px] flex flex-col gap-10">
           <div className="flex flex-col gap-4 items-center">
-            <h2 className="text-4xl tracking-wide font-semibold">
+            <h2 className="text-3xl tracking-wide font-bold">
               Mediations in Ottawa or Virtually
             </h2>
             <div className="flex justify-center items-center space-x-8 p-8 bg-white">
@@ -65,13 +65,13 @@ const DeliveryOfMaterials = () => {
                     <p className="text-4xl font-bold text-darkPrimary tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_20%)]">
                       $1,500.00
                     </p>
-                    <p className="text-xs  text-slate-800">*Before Tax</p>
+                    <p className="text-xs  text-slate-800">+ HST</p>
                   </div>
                 </div>
                 <div className="px-8 py-4 ">
                   <p className="text-sm text-extraDarkPrimary italic">
-                    For those who seek a prompt, yet thorough, resolution to
-                    their disputes.
+                    The fee is inclusive of preparation time prior to the
+                    mediation
                   </p>
                 </div>
               </div>
@@ -93,13 +93,13 @@ const DeliveryOfMaterials = () => {
                     <p className="text-4xl font-bold text-darkPrimary tracking-wide [text-shadow:_0_2px_4px_rgb(0_0_0_/_20%)]">
                       $2,500.00
                     </p>
-                    <p className="text-xs  text-slate-800">*Before Tax</p>
+                    <p className="text-xs  text-slate-800">+ HST</p>
                   </div>
                 </div>
                 <div className="px-8 py-4 ">
                   <p className="text-sm text-extraDarkPrimary italic">
-                    Comprehensive day-long mediation to resolve complex
-                    disputes.
+                    The fee is inclusive of preparation time prior to the
+                    mediation
                   </p>
                 </div>
               </div>
@@ -113,13 +113,13 @@ const DeliveryOfMaterials = () => {
           <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
           <div className="flex flex-col gap-4 items-center">
-            <h2 className="text-4xl tracking-wide font-semibold">
-              Mediations in the Eastern Region outside Ottawa
+            <h2 className="text-3xl tracking-wide font-bold">
+              In Person Mediations in the Eastern Region outside Ottawa
             </h2>
             <div className="flex justify-center items-center space-x-8 p-8 bg-white">
               {/* Full Day Mediation Card */}
               <div
-                className="transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden  max-w-[580px] relative bg-cover"
+                className="transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden  max-w-[500px] relative bg-cover"
                 style={{
                   backgroundImage:
                     "radial-gradient(circle at center, #402a18 10%, #2e1e11 150%)",
@@ -142,12 +142,13 @@ const DeliveryOfMaterials = () => {
                     >
                       $2,800.00
                     </p>
-                    <p className="text-xs text-[#F0E2BE]">*Before Tax</p>
+                    <p className="text-xs text-[#F0E2BE]">+ HST</p>
                   </div>
                 </div>
                 <div className="px-8 py-4">
                   <p className="text-sm text-[#e4d7b6] italic">
-                    Comprehensive day-long mediation in the eastern region
+                    The fee is inclusive of travel time and preparation time
+                    prior to the mediation
                   </p>
                 </div>
               </div>
@@ -163,7 +164,7 @@ const DeliveryOfMaterials = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-semibold">
-              Mediations outside the Eastern Region
+              In Person Mediations outside the Eastern Region
             </h2>
             <p>
               The fee, as well as any travel/accommodation expenses will be
@@ -173,7 +174,7 @@ const DeliveryOfMaterials = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-semibold">
-              Premium for multiple actions or parties
+              Premium for Multiple Actions or Parties
             </h2>
             <p>
               For mediations involving more than one action, global mediations
@@ -189,7 +190,7 @@ const DeliveryOfMaterials = () => {
           <p>
             For mediations in Ottawa, the Eastern Region or virtually, if the
             mediation is cancelled within 15 days of the scheduled date, there
-            will be a cancellation fee of 50% of the mediation fee.
+            will be a cancellation fee of 50% plus HST of the mediation fee.
           </p>
           <p>
             For in person mediations outside the Eastern Region, the
