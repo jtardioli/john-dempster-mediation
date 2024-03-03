@@ -200,7 +200,7 @@ const DeliveryOfMaterials = () => {
 
           <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
-          <h1 className="text-4xl font-bold">Payment of Accounts:</h1>
+          <h1 className="text-4xl font-bold">Payment of Accounts</h1>
           <p>
             Unless otherwise discussed and agreed in advance between the parties
             and the mediator, the fees for the mediation will be shared and paid
