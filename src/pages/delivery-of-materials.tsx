@@ -59,7 +59,7 @@ const DeliveryOfMaterials = () => {
           </p>
           <p>
             If this is not possible, then hard copies of mediation briefs and
-            any other materials can be provide to me by mail or courier at the
+            any other materials can be provided to me by mail or courier at the
             following address:
           </p>
           <p>
