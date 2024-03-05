@@ -13,6 +13,13 @@ const BookNow = () => {
       <section className="mt-32 flex flex-col  items-center justify-center bg-slate-100">
         <InlineWidget
           styles={{ width: "100%", height: "84vh" }}
+          pageSettings={{
+            backgroundColor: "ffffff",
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
+            primaryColor: "2e1e11",
+            textColor: "4d5055",
+          }}
           url="https://calendly.com/johndempster"
         />
       </section>
