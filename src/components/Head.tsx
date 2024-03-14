@@ -18,7 +18,7 @@ const PageHead: FC<Props> = ({ title, description }) => {
       <meta property="og:url" content={url} />
       <meta
         property="og:image"
-        content="https://live.staticflickr.com/65535/53584014421_e070afb8c4_k.jpg"
+        content="https://live.staticflickr.com/65535/53584045406_121ed92b86.jpg"
       />
       <meta property="og:url" content={url} />
       <meta property="og:image:width" content="1200" />
@@ -32,7 +32,7 @@ const PageHead: FC<Props> = ({ title, description }) => {
       <meta name="twitter:description" content={description} />
       <meta
         name="twitter:image:src"
-        content="https://live.staticflickr.com/65535/53584014421_e070afb8c4_k.jpg"
+        content="https://live.staticflickr.com/65535/53584045406_121ed92b86.jpg"
       />
       {/* Standard */}
       <title>{title}</title>
