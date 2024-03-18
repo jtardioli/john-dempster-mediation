@@ -14,7 +14,7 @@ const RatesAndCancellations = () => {
         description="Rates and Cancellations for John Dempster Mediation. Full day and Half day fees and cancellation fees are outlined here."
       />
       <main className={inter.className}>
-        {/* <NavBar /> */}
+        <NavBar />
         <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
           <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
             <div className="flex items-center justify-center space-x-4 mt-4">
@@ -24,10 +24,7 @@ const RatesAndCancellations = () => {
                 <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
               </div>
 
-              <p className=" block  lg:hidden text-3xl md:text-5xl text-primary tracking-widest font-bold text-center">
-                Rates <br /> & <br /> Cancellations
-              </p>
-              <p className=" hidden lg:block text-5xl text-primary tracking-widest font-bold text-center">
+              <p className="text-4xl md:text-5xl text-primary tracking-widest font-bold text-center">
                 Rates & Cancellations
               </p>
               <div className="hidden md:flex flex-col gap-2 items-start">
@@ -185,7 +182,7 @@ const RatesAndCancellations = () => {
               <h2 className="text-xl sm:text-2xl  font-semibold">
                 Premium for Multiple Actions or Parties
               </h2>
-              <p>
+              <p className="text-sm md:text-md">
                 For mediations involving more than one action, global mediations
                 of both the MVA Tort and AB claims, or involving more than three
                 parties, a premium on the mediation fee will be discussed and
@@ -198,7 +195,7 @@ const RatesAndCancellations = () => {
             <h1 className="text-2xl sm:text-4xl font-bold">
               Cancellation Fees
             </h1>
-            <p>
+            <p className="text-sm md:text-md">
               For mediations in Ottawa, the Eastern Region or virtually, if the
               mediation is cancelled within 15 days of the scheduled date, there
               will be a cancellation fee of 50% plus HST of the mediation fee.
@@ -215,19 +212,19 @@ const RatesAndCancellations = () => {
             <h1 className="text-2xl md:text-4xl font-bold">
               Payment of Accounts
             </h1>
-            <p>
+            <p className="text-sm md:text-md">
               Unless otherwise discussed and agreed in advance between the
               parties and the mediator, the fees for the mediation will be
               shared and paid equally by counsel for the parties.
             </p>
-            <p>
+            <p className="text-sm md:text-md">
               All accounts for fees, disbursements and HST are due and payable
               when rendered. Overdue accounts bear interest at the rate of 5%
               per annum calculated monthly until paid in full.
             </p>
           </div>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );
