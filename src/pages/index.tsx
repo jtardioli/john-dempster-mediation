@@ -33,7 +33,7 @@ export default function Home() {
         description="John Dempster is a mediator in Ottawa, Ontario. He is a lawyer with nearly three decades of experience in litigation. He has represented clients at all levels of court in Ontario. He is a strong believer in mediation and achieving early resolution of claims."
       />
       <main className={`${inter.className} bg-slate-50 `}>
-        {/* <NavBar /> */}
+        <NavBar />
         <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
           <div className="absolute z-10 top-[35%]  text-white flex flex-col items-center w-full [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
             <p className="text-4xl sm:text-5xl md:text-7xl  text-center tracking-wide font-semibold">

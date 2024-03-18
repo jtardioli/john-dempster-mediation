@@ -14,20 +14,23 @@ const RatesAndCancellations = () => {
         description="Rates and Cancellations for John Dempster Mediation. Full day and Half day fees and cancellation fees are outlined here."
       />
       <main className={inter.className}>
-        <NavBar />
-        <div className="w-full overflow-x-hidden h-[86vh] relative">
+        {/* <NavBar /> */}
+        <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
           <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
             <div className="flex items-center justify-center space-x-4 mt-4">
-              <div className="flex flex-col gap-2 items-end">
+              <div className=" hidden md:flex flex-col gap-2 items-end">
                 <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
                 <div className="w-64 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
                 <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
               </div>
 
-              <p className="text-5xl text-primary tracking-widest font-bold">
+              <p className=" block  lg:hidden text-3xl md:text-5xl text-primary tracking-widest font-bold text-center">
+                Rates <br /> & <br /> Cancellations
+              </p>
+              <p className=" hidden lg:block text-5xl text-primary tracking-widest font-bold text-center">
                 Rates & Cancellations
               </p>
-              <div className="flex flex-col gap-2 items-start">
+              <div className="hidden md:flex flex-col gap-2 items-start">
                 <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
                 <div className="w-64 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
                 <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
@@ -45,13 +48,13 @@ const RatesAndCancellations = () => {
           </div>
           <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.4]" />
         </div>
-        <section className="flex items-center justify-center px-20 gap-10 py-16">
+        <section className="flex items-center justify-center px-4 md:px-20 gap-10 py-16">
           <div className="w-full max-w-[1000px] flex flex-col gap-10">
             <div className="flex flex-col gap-4 items-center">
-              <h2 className="text-3xl tracking-wide font-bold">
+              <h2 className="text-center text-xl sm:text-2xl md:text-3xl tracking-wide font-bold">
                 Mediations in Ottawa or Virtually
               </h2>
-              <div className="flex justify-center items-center space-x-8 p-8 bg-white">
+              <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 md:p-8 bg-white">
                 {/* Half Day Mediation Card */}
                 <div
                   className="flex-1 transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden border-[1px border-[#e0c78d]]"
@@ -119,10 +122,10 @@ const RatesAndCancellations = () => {
             <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
             <div className="flex flex-col gap-4 items-center">
-              <h2 className="text-3xl tracking-wide font-bold">
+              <h2 className="text-center text-xl sm:text-2xl md:text-3xl tracking-wide font-bold">
                 In Person Mediations in the Eastern Region outside Ottawa
               </h2>
-              <div className="flex justify-center items-center space-x-8 p-8 bg-white">
+              <div className="flex justify-center items-center space-x-8 md:p-8 bg-white">
                 {/* Full Day Mediation Card */}
                 <div
                   className="transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden  max-w-[500px] relative bg-cover"
@@ -169,17 +172,17 @@ const RatesAndCancellations = () => {
             <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-semibold">
+              <h2 className="text-xl sm:text-2xl font-semibold">
                 In Person Mediations outside the Eastern Region
               </h2>
               <p>
-                The fee, as well as any travel/accommodation expenses will be
+                The fee, as well as any travel or accommodation expenses will be
                 discussed and agreed to between the parties and the mediator.
               </p>
             </div>
 
             <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-semibold">
+              <h2 className="text-xl sm:text-2xl  font-semibold">
                 Premium for Multiple Actions or Parties
               </h2>
               <p>
@@ -192,7 +195,9 @@ const RatesAndCancellations = () => {
 
             <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
-            <h1 className="text-4xl font-bold">Cancellation Fees</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold">
+              Cancellation Fees
+            </h1>
             <p>
               For mediations in Ottawa, the Eastern Region or virtually, if the
               mediation is cancelled within 15 days of the scheduled date, there
@@ -207,7 +212,9 @@ const RatesAndCancellations = () => {
 
             <div className=" border-slate-300 border-b-[1px] h-[1px]"></div>
 
-            <h1 className="text-4xl font-bold">Payment of Accounts</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">
+              Payment of Accounts
+            </h1>
             <p>
               Unless otherwise discussed and agreed in advance between the
               parties and the mediator, the fees for the mediation will be
@@ -220,7 +227,7 @@ const RatesAndCancellations = () => {
             </p>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
