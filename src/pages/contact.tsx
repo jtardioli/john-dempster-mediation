@@ -79,7 +79,7 @@ const Contact = () => {
           <div className="flex h-full">
             <div className="min-w-full ">
               <img
-                src={`images/01.jpg`}
+                src={`images/man-in-suit.jpg`}
                 alt={`Image`}
                 className="object-cover w-full h-full filter  brightness-[70%]"
               />

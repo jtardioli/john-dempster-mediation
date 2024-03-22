@@ -37,11 +37,7 @@ const DesktopNavBar = () => {
       } `}
     >
       <img
-        src={
-          showDarkNav
-            ? "/images/John-Dempster-Dark.svg"
-            : "/images/John-Dempster.svg"
-        }
+        src={showDarkNav ? "/images/logo-dark.svg" : "/images/logo-gold.svg"}
         className=" size-40 xl:size-52 mt-6"
       />
       <div className="flex items-center gap-12 text-base lg:text-lg xl:text-[1.25rem] font-medium tracking-wider">
@@ -137,9 +133,7 @@ const MobileNavBar = () => {
         <div className="flex items-center justify-between w-full">
           <img
             src={
-              showDarkNav
-                ? "/images/John-Dempster-Dark.svg"
-                : "/images/John-Dempster.svg"
+              showDarkNav ? "/images/logo-dark.svg" : "/images/logo-gold.svg"
             }
             className="size-40 mt-6"
           />

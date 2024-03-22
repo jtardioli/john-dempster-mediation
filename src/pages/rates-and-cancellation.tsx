@@ -37,7 +37,7 @@ const RatesAndCancellations = () => {
           <div className="flex h-full">
             <div className="min-w-full ">
               <img
-                src={`images/03.jpg`}
+                src={`images/office.jpg`}
                 alt={`Image`}
                 className="object-cover w-full h-full filter  brightness-[35%]"
               />

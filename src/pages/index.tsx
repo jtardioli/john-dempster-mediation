@@ -59,7 +59,7 @@ export default function Home() {
           <div className="flex h-full">
             <div className="min-w-full ">
               <img
-                src={`images/02.jpg`}
+                src={`images/lady-justice.jpg`}
                 alt={`Image`}
                 className=" object-cover w-full h-full filter  brightness-[50%]"
               />
@@ -106,7 +106,7 @@ export default function Home() {
         <section
           className="pt-8 md:pt-16 flex items-center justify-center text-slate-100  bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-32 md:pb-48 "
           style={{
-            backgroundImage: `url('images/05.jpg')`,
+            backgroundImage: `url('images/gavel.jpg')`,
             clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)"
           }}
         >
@@ -179,7 +179,7 @@ export default function Home() {
           <div
             className=" flex-col items-center w-full h-full py-24 hidden md:flex"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1597764690523-15bea4c581c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+              backgroundImage: `url('/images/doctor-brace.avif')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
@@ -200,7 +200,7 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-24 "
             style={{
-              backgroundImage: `url('https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+              backgroundImage: `url('images/office-workers.jpeg')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
@@ -225,7 +225,7 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-16 "
             style={{
-              backgroundImage: `url('https://images.pexels.com/photos/2111768/pexels-photo-2111768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+              backgroundImage: `url('images/balcony.webp')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
@@ -253,7 +253,7 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-24 "
             style={{
-              backgroundImage: `url('https://images.pexels.com/photos/220885/pexels-photo-220885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+              backgroundImage: `url('images/construction.webp')`,
               backgroundPosition: "30% 30%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",

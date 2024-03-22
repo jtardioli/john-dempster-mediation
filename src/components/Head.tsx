@@ -37,7 +37,7 @@ const PageHead: FC<Props> = ({ title, description }) => {
       {/* Standard */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="icon" href="/favicon.png" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 };
