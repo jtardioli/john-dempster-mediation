@@ -4,9 +4,9 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center text-white w-full">
-      <div className="bg-extraDarkPrimary brightness-90 h-[30vh]  flex items-center justify-center  w-full">
-        <div className="flex max-w-[1150px] w-full justify-between">
-          <div className="flex flex-1 flex-col items-center justify-center text-xl gap-2">
+      <div className="bg-extraDarkPrimary brightness-90 h-56  flex items-center justify-center  w-full">
+        <div className="flex max-w-[1150px] w-full  justify-center  flex-col md:flex-row gap-5 md:gap-0">
+          <div className="flex flex-1 flex-col items-center justify-center text-base md:text-xl gap-2">
             <a className="hover:underline" href="tel:+16137299704">
               613-729-9704
             </a>
@@ -14,7 +14,10 @@ const Footer = () => {
               jdempster@sympatico.ca
             </a>
           </div>
-          <div className="flex flex-1 flex-col items-center justify-center text-lg gap-3">
+
+          <div className="border-slate-300 border-b-[1px] h-[1px] mx-14 rounded-xl  md:hidden"></div>
+
+          <div className="flex  flex-1 flex-col items-center justify-center text-sm md:text-lg gap-3">
             <div className="flex flex-col items-center justify-center">
               <p>2285 St. Laurent Blvd, Ottawa</p>
               <p>Ottawa, Ontario K1G 4Z7, Canada</p>
@@ -28,7 +31,7 @@ const Footer = () => {
               Get Directions
             </a>
           </div>
-          <div className="flex flex-1 items-center justify-center">
+          <div className="lg:flex flex-1 items-center justify-center hidden">
             <Link href="/book-now">
               <button className="text-darkPrimary font-semibold tracking-wider bg-slate-100 py-4 px-6 rounded-md text-xl hover:brightness-90">
                 Book Now

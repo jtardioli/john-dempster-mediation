@@ -15,7 +15,7 @@ const RatesAndCancellations = () => {
       />
       <main className={inter.className}>
         <NavBar />
-        <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
+        <div className="w-full overflow-x-hidden h-[56vh] lg:h-[86vh] relative">
           <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
             <div className="flex items-center justify-center space-x-4 mt-4">
               <div className=" hidden md:flex flex-col gap-2 items-end">
@@ -57,7 +57,7 @@ const RatesAndCancellations = () => {
                   className="flex-1 transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden border-[1px border-[#e0c78d]]"
                   style={{
                     backgroundImage:
-                      "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)",
+                      "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)"
                   }}
                 >
                   <div className="p-8 ">
@@ -85,7 +85,7 @@ const RatesAndCancellations = () => {
                   className="flex-1 transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden border-[1px] border-[#e0c78d]"
                   style={{
                     backgroundImage:
-                      "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)",
+                      "radial-gradient(circle at center, #F0E2BE 20%, #EBBC74 200%)"
                   }}
                 >
                   <div className="p-8 ">
@@ -128,7 +128,7 @@ const RatesAndCancellations = () => {
                   className="transform transition duration-500 hover:scale-105 shadow-md shadow-slate-400 rounded-xl overflow-hidden  max-w-[500px] relative bg-cover"
                   style={{
                     backgroundImage:
-                      "radial-gradient(circle at center, #402a18 10%, #2e1e11 150%)",
+                      "radial-gradient(circle at center, #402a18 10%, #2e1e11 150%)"
                   }}
                 >
                   <div className="p-8">

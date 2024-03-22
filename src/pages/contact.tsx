@@ -14,7 +14,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -29,9 +29,9 @@ const Contact = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json",
+            Accept: "application/json"
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(data)
         }
       );
 
@@ -57,19 +57,19 @@ const Contact = () => {
       />
       <main className={`${inter.className} bg-slate-100`}>
         <NavBar />
-        <div className="w-full overflow-x-hidden h-[86vh] relative">
+        <div className="w-full overflow-x-hidden h-[56vh] lg:h-[86vh] relative">
           <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
             <div className="flex items-center justify-center space-x-4 mt-4">
-              <div className="flex flex-col gap-2 items-end">
+              <div className="hidden md:flex flex-col gap-2 items-end">
                 <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
                 <div className="w-64 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
                 <div className="w-44 h-[2px] bg-gradient-to-r from-transparent to-white rounded-sm"></div>
               </div>
 
-              <p className="text-7xl text-primary tracking-widest font-bold">
+              <p className="text-5xl md:text-7xl text-primary tracking-widest font-bold">
                 Contact
               </p>
-              <div className="flex flex-col gap-2 items-start">
+              <div className="hidden md:flex flex-col gap-2 items-start">
                 <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
                 <div className="w-64 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
                 <div className="w-44 h-[2px] bg-gradient-to-l from-transparent to-white rounded-sm"></div>
@@ -88,27 +88,20 @@ const Contact = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-[#2e1e10] opacity-[0.5]" />
         </div>
 
-        <section
-          className=" flex flex-col items-center justify-center px-20 gap-10 py-16 bg-white"
-          style={{
-            backgroundImage: `url('images/pexels-photo-5485125.jpeg')`,
-            backgroundPosition: "80% 0%", // Adjust this value to move the image
-            backgroundSize: "130%",
-          }}
-        >
-          <div className="flex justify-between gap-12 w-full px-40">
-            <div className="flex flex-col justify-start items-start gap-8 text-lg  flex-1">
-              <h2 className="text-3xl font-semibold tracking-wider ">
+        <section className="flex items-center justify-center xl:px-20 gap-10 py-10 md:py-16 bg-white contact-form-background">
+          <div className="flex flex-col md:flex-row justify-between gap-12 w-full px-4 lg:px-28 xl:px-40">
+            <div className="flex flex-col justify-start items-start gap-8 text-lg  flex-1 ">
+              <h2 className="text-2xl lg:text-3xl font-semibold tracking-wider ">
                 Get In Touch
               </h2>
 
-              <div className="flex flex-col gap-2 text-slate-800">
+              <div className="flex flex-col gap-2 text-slate-800 text-base md:text-lg">
                 <p className=" font-semibold text-slate-900">Address:</p>
                 <p>2285 St. Laurent Blvd, Ottawa</p>
                 <p>Ottawa, Ontario K1G 4Z7, Canada</p>
               </div>
 
-              <div className="flex flex-col gap-2 text-slate-800">
+              <div className="flex flex-col gap-2 text-slate-800 text-base md:text-lg">
                 <p className="font-semibold text-slate-900">Contact Details:</p>
                 <p>
                   Phone:{" "}
@@ -129,9 +122,9 @@ const Contact = () => {
             </div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 flex-1"
+              className="flex flex-col gap-4 flex-1 font-medium"
             >
-              <h2 className="text-3xl font-semibold tracking-wider mb-3">
+              <h2 className="text-2xl lg:text-3xl font-semibold tracking-wider mb-3">
                 Contact John Dempster
               </h2>
 
@@ -144,7 +137,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("firstName", {
-                      required: "First name is required",
+                      required: "First name is required"
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.firstName
@@ -167,7 +160,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("lastName", {
-                      required: "Last name is required",
+                      required: "Last name is required"
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.lastName
@@ -196,8 +189,8 @@ const Contact = () => {
                       required: "Email is required",
                       pattern: {
                         value: emailRegex,
-                        message: "Invalid email address",
-                      },
+                        message: "Invalid email address"
+                      }
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.email
@@ -220,7 +213,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("phoneNumber", {
-                      required: "Phone number is required",
+                      required: "Phone number is required"
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.phoneNumber

@@ -14,8 +14,8 @@ const DeliveryOfMaterials = () => {
         description="Delivery of materials to John Dempster Mediation. Mediation briefs and any other materials can be provided electronically by email or by mail or courier."
       />
       <main className={inter.className}>
-        {/* <NavBar /> */}
-        <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
+        <NavBar />
+        <div className="w-full overflow-x-hidden h-[56vh] lg:h-[86vh] relative">
           <div className="absolute z-10 top-[40%] text-white w-full flex justify-center [text-shadow:_0_2px_4px_rgb(0_0_0_/_60%)]">
             <div className="flex items-center justify-center space-x-4 mt-4">
               <div className="hidden md:flex flex-col gap-2 items-end">
@@ -83,7 +83,7 @@ const DeliveryOfMaterials = () => {
             </p>
           </div>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );

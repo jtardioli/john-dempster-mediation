@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import PageHead from "@/components/Head";
 import { NavBar } from "@/components/NavBar";
 import { Inter } from "next/font/google";
@@ -30,6 +31,7 @@ const BookNow = () => {
             url="https://calendly.com/johndempster"
           />
         </section>
+        <Footer />
       </main>
     </>
   );

@@ -2,17 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-bg-filter::before {
+/* Add this CSS to your stylesheet or within a <style> tag */
+
+.contact-form-background {
+  position: relative; /* Ensure the pseudo-element is positioned relatively to its parent */
+}
+
+.contact-form-background::before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background-image: url("https://images.pexels.com/photos/220885/pexels-photo-220885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  background-position: 30% 30%;
-  background-size: 100%;
+  background-image: url("../../public/images/pexels-photo-5485125.jpeg");
+  background-position: 20% 0%;
+  background-size: 130%;
+  opacity: 0.8; /* Set the opacity of the image */
+  pointer-events: none; /* Ensure clicks pass through to elements underneath */
   background-repeat: no-repeat;
-  filter: brightness(50%);
-  z-index: -1;
+  transform: scaleX(-1);
+}
+
+/* Make sure the content of .contact-form-background is stacked above the pseudo-element */
+.contact-form-background > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 1280px) {
+  .contact-form-background:before {
+    opacity: 0.3; /* Set the opacity of the image */
+  }
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 968px) {
+  .contact-form-background:before {
+    transform: scaleX(1);
+    opacity: 0.3; /* Set the opacity of the image */
+  }
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .contact-form-background:before {
+    transform: scaleX(1);
+    opacity: 0.8; /* Set the opacity of the image */
+  }
 }

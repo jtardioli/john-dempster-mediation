@@ -12,7 +12,7 @@ import {
   FaHouseDamage,
   FaMapMarkerAlt,
   FaUserInjured,
-  FaWheelchair,
+  FaWheelchair
 } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
 import { GiFamilyHouse, GiMoneyStack, GiScreaming } from "react-icons/gi";
@@ -20,7 +20,7 @@ import {
   MdAutoGraph,
   MdConstruction,
   MdMoneyOffCsred,
-  MdRealEstateAgent,
+  MdRealEstateAgent
 } from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,7 +34,7 @@ export default function Home() {
       />
       <main className={`${inter.className} bg-slate-50 `}>
         <NavBar />
-        <div className="w-full overflow-x-hidden h-[56vh] md:h-[86vh] relative">
+        <div className="w-full overflow-x-hidden h-[56vh] lg:h-[86vh] relative">
           <div className="absolute z-10 top-[35%]  text-white flex flex-col items-center w-full [text-shadow:_0_2px_4px_rgb(0_0_0_/_90%)] uppercase">
             <p className="text-4xl sm:text-5xl md:text-7xl  text-center tracking-wide font-semibold">
               John Dempster
@@ -68,13 +68,13 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.3]" />
         </div>
         <section className="flex items-center w-full  justify-center  py-8 md:py-16 bg-slate-50">
-          <div className="flex flex-col gap-7 lg:gap-0 lg:flex-row items-center justify-between  w-full max-w-[1000px]">
-            <div className="flex flex-col gap-5 lg:gap-10 max-w-[500px]">
+          <div className="flex flex-col gap-6 md:gap-20 lg:gap-0 lg:flex-row items-center justify-between  w-full max-w-[1000px]">
+            <div className="flex flex-col gap-5 lg:gap-10 lg:max-w-[500px] px-0 sm:px-20 lg:px-0">
               <p className="text-2xl text-center lg:text-4xl font-semibold md:text-left">
                 Mediation: A Path to Early and Satisfactory Resolution
               </p>
 
-              <p className=" text-slate-800 italic text-sm px-4 md:px-0 lg:text-lg">
+              <p className=" text-slate-800 italic text-sm px-4 md:px-0 md:text-lg">
                 &quot;Litigation is expensive, time-consuming, and stressful,
                 with outcomes that are difficult to predict and the potential
                 for lengthy proceedings that carry a great deal of risk. As your
@@ -97,7 +97,7 @@ export default function Home() {
                 className="object-cover h-[340px] w-[340px] md:h-[440px] md:w-[440px]  "
                 style={{
                   objectPosition: "-10px 20px",
-                  transform: "scale(1.3)",
+                  transform: "scale(1.3)"
                 }}
               />
             </div>
@@ -107,14 +107,14 @@ export default function Home() {
           className="pt-8 md:pt-16 flex items-center justify-center text-slate-100  bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-32 md:pb-48 "
           style={{
             backgroundImage: `url('images/05.jpg')`,
-            clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)",
+            clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)"
           }}
         >
           {/* Apply the brown filter behind the content but not on top of the text */}
           <div className="absolute top-0 left-0 w-full h-full bg-[#1c120a] opacity-[0.8]"></div>
 
           {/* Ensure content is positioned above the filter using relative positioning */}
-          <div className="relative flex flex-col items-start justify-center gap-5 lg:gap-10 max-w-[1000px] w-full text-sm md:text-lg lg:text-xl z-10 [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] leading-relaxed px-4 lg:px-0">
+          <div className="relative flex flex-col items-start justify-center gap-5 lg:gap-10 max-w-[1000px] w-full text-sm md:text-lg lg:text-xl z-10 [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] leading-relaxed px-4  sm:px-24 md:px-20">
             <p className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-relaxed tracking-wider">
               About Me
             </p>
@@ -183,12 +183,12 @@ export default function Home() {
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)",
+              backdropFilter: "brightness(50%)"
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.6] -z-10"></div>
 
-            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
+            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold mx-4">
               <ExpertiseCard label="Personal Injury" Icon={FaUserInjured} />
               <ExpertiseCard
                 label="Long Term Disability Claims"
@@ -204,13 +204,13 @@ export default function Home() {
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)",
+              backdropFilter: "brightness(50%)"
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.7] -z-10"></div>
 
             {/* First */}
-            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
+            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold  mx-4">
               <ExpertiseCard label="Employment Law" Icon={GiMoneyStack} />
               <ExpertiseCard
                 label="Estate Litigation"
@@ -229,12 +229,12 @@ export default function Home() {
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)",
+              backdropFilter: "brightness(50%)"
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.6] -z-10"></div>
 
-            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold">
+            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold  mx-4">
               <ExpertiseCard label="Land Development" Icon={FaMapMarkerAlt} />
               <ExpertiseCard label="Environmental Law" Icon={FaGlobeAmericas} />
               <ExpertiseCard
@@ -257,12 +257,12 @@ export default function Home() {
               backgroundPosition: "30% 30%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)",
+              backdropFilter: "brightness(50%)"
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.4] -z-10"></div>
 
-            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold ">
+            <div className="grid grid-cols-2 gap-4 text-darkPrimary font-semibold  mx-4">
               <ExpertiseCard label="Construction Law" Icon={MdConstruction} />
               <ExpertiseCard
                 label="Commercial Litigation & Shareholder Disputes"
@@ -271,7 +271,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );
