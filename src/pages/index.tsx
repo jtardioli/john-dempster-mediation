@@ -248,7 +248,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Third */}
+          {/* Third 123 */}
 
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-24 "
