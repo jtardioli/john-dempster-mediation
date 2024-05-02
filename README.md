@@ -1,4 +1,4 @@
-Check out the webiste [here](https://john-dempster-mediation.vercel.app/)
+Check out the website [here](https://john-dempster-mediation.vercel.app/)
 
 
 ![image](https://github.com/jtardioli/john-dempster-mediation/assets/85530348/5f713ed8-30bf-432b-abd9-26a654187669)
