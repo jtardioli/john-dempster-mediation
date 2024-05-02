@@ -13,5 +13,5 @@ This project involves a simple yet professional website designed for a family me
 - Calendly Integration: Allows for easy appointment scheduling directly on the website.
 
 Key Learnings
-- Design Complexity: The process of crafting designs that are both appealing and functional took much longer than initially anticipated, underscoring the importance of dedicating sufficient time to the design phase.
+- Design Complexity: Creating a design that is both appealing and functional took much longer than initially anticipated.
 - Integration Insights: Gained a deep understanding of Calendly's settings and explored alternative calendar systems like Acuity.
