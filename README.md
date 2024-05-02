@@ -1,5 +1,6 @@
 ![image](https://github.com/jtardioli/john-dempster-mediation/assets/85530348/dc4d326f-a2c3-4818-a1cd-0f6f384ed75d)
-![image](https://github.com/jtardioli/john-dempster-mediation/assets/85530348/366ffcfa-8d13-4ac8-b833-93e56bf98d24)
+![image](https://github.com/jtardioli/john-dempster-mediation/assets/85530348/c5414fad-03bf-4cbb-9c32-a078015cf6fd)
+
 
 ## Description
 This project involves a simple yet professional website designed for a family member's business. It showcases my skills in creating visually appealing and user-friendly website interfaces.
