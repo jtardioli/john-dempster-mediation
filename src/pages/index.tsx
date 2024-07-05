@@ -12,7 +12,7 @@ import {
   FaHouseDamage,
   FaMapMarkerAlt,
   FaUserInjured,
-  FaWheelchair
+  FaWheelchair,
 } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
 import { GiFamilyHouse, GiMoneyStack, GiScreaming } from "react-icons/gi";
@@ -20,7 +20,7 @@ import {
   MdAutoGraph,
   MdConstruction,
   MdMoneyOffCsred,
-  MdRealEstateAgent
+  MdRealEstateAgent,
 } from "react-icons/md";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -97,7 +97,7 @@ export default function Home() {
                 className="object-cover h-[340px] w-[340px] md:h-[440px] md:w-[440px]  "
                 style={{
                   objectPosition: "-10px 20px",
-                  transform: "scale(1.3)"
+                  transform: "scale(1.3)",
                 }}
               />
             </div>
@@ -107,7 +107,7 @@ export default function Home() {
           className="pt-8 md:pt-16 flex items-center justify-center text-slate-100  bg-cover bg-center bg-no-repeat bg-fixed filter backdrop-filter backdrop-blur-lg relative pb-32 md:pb-48 "
           style={{
             backgroundImage: `url('images/gavel.jpg')`,
-            clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)"
+            clipPath: "polygon(0 0, 100% 0, 100% 85%, 50% 93%, 0 85%)",
           }}
         >
           {/* Apply the brown filter behind the content but not on top of the text */}
@@ -179,11 +179,11 @@ export default function Home() {
           <div
             className=" flex-col items-center w-full h-full py-24 hidden md:flex"
             style={{
-              backgroundImage: `url('/images/doctor-brace.avif')`,
+              backgroundImage: `url('/images/doctor-brace.jpg')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)"
+              backdropFilter: "brightness(50%)",
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.6] -z-10"></div>
@@ -200,11 +200,11 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-24 "
             style={{
-              backgroundImage: `url('images/office-workers.jpeg')`,
+              backgroundImage: `url('images/office-workers.jpg')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)"
+              backdropFilter: "brightness(50%)",
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.7] -z-10"></div>
@@ -225,11 +225,11 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-16 "
             style={{
-              backgroundImage: `url('images/balcony.webp')`,
+              backgroundImage: `url('images/balcony.jpg')`,
               backgroundPosition: "30% 80%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)"
+              backdropFilter: "brightness(50%)",
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-extraDarkPrimary opacity-[0.6] -z-10"></div>
@@ -253,11 +253,11 @@ export default function Home() {
           <div
             className="hidden md:flex flex-col items-center w-full h-full py-24 "
             style={{
-              backgroundImage: `url('images/construction.webp')`,
+              backgroundImage: `url('images/construction.jpg')`,
               backgroundPosition: "30% 30%", // Adjust this value to move the image
               backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
-              backdropFilter: "brightness(50%)"
+              backdropFilter: "brightness(50%)",
             }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-darkPrimary opacity-[0.4] -z-10"></div>
