@@ -72,7 +72,7 @@ const DeliveryOfMaterials = () => {
             <p>
               <strong>
                 {" "}
-                John D. Dempster 2285 St. Laurent Blvd., Unit D16 Ottawa, ON,
+                John D. Dempster 2285 St. Laurent Blvd, Unit D16, Ottawa, ON,
                 K1G 4Z7
               </strong>
             </p>

@@ -19,13 +19,13 @@ const Footer = () => {
 
           <div className="flex  flex-1 flex-col items-center justify-center text-sm md:text-lg gap-3">
             <div className="flex flex-col items-center justify-center">
-              <p>2285 St. Laurent Blvd, Ottawa</p>
-              <p>Ottawa, Ontario K1G 4Z7, Canada</p>
+              <p>2285 St. Laurent Blvd, Unit D16</p>
+              <p>Ottawa, Ontario, K1G 4Z7 </p>
             </div>
 
             <a
               className="hover:underline uppercase text-sm"
-              href="https://www.google.com/maps/dir//2285+St.+Laurent+Blvd,+Ottawa,+ON+K1G+4Z7,+Canada/@45.3855918,-75.6962942,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4cce0f270a0cb6b9:0x3733909b97bb5f0d!2m2!1d-75.6138935!2d45.3855009?hl=en-US&entry=ttu"
+              href="https://www.google.com/maps/dir//2285+St.+Laurent+Blvd+D16,+Ottawa,+ON+K1G+4Z7/@45.3858291,-75.613547,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4cce0f270c917563:0x75b381ff76c10afd!2m2!1d-75.613547!2d45.3858291!3e0?entry=ttu"
               target="_blank"
             >
               Get Directions

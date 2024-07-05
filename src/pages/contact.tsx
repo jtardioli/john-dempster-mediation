@@ -14,7 +14,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -29,9 +29,9 @@ const Contact = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
         }
       );
 
@@ -97,8 +97,8 @@ const Contact = () => {
 
               <div className="flex flex-col gap-2 text-slate-800 text-base md:text-lg">
                 <p className=" font-semibold text-slate-900">Address:</p>
-                <p>2285 St. Laurent Blvd, Ottawa</p>
-                <p>Ottawa, Ontario K1G 4Z7, Canada</p>
+                <p>2285 St. Laurent Blvd, Unit D16</p>
+                <p>Ottawa, Ontario K1G 4Z7</p>
               </div>
 
               <div className="flex flex-col gap-2 text-slate-800 text-base md:text-lg">
@@ -137,7 +137,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("firstName", {
-                      required: "First name is required"
+                      required: "First name is required",
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.firstName
@@ -160,7 +160,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("lastName", {
-                      required: "Last name is required"
+                      required: "Last name is required",
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.lastName
@@ -189,8 +189,8 @@ const Contact = () => {
                       required: "Email is required",
                       pattern: {
                         value: emailRegex,
-                        message: "Invalid email address"
-                      }
+                        message: "Invalid email address",
+                      },
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.email
@@ -213,7 +213,7 @@ const Contact = () => {
                   </label>
                   <input
                     {...register("phoneNumber", {
-                      required: "Phone number is required"
+                      required: "Phone number is required",
                     })}
                     className={`p-3 outline-none rounded-md shadow-inner ${
                       errors.phoneNumber
