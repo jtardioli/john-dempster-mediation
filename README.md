@@ -8,7 +8,7 @@ https://github.com/jtardioli/john-dempster-mediation/assets/85530348/d8f74baf-12
 
 
 ## Description
-This project involves a simple yet professional website designed for a family member's business. It showcases my skills in creating visually appealing and user-friendly website interfaces.
+This project involves a simple yet professional website designed for a client. It showcases my skills in creating visually appealing and user-friendly website interfaces.
 
 ## Technologies Used
 - Next.js: Chosen for its server-side rendering capabilities, enhancing the website's performance and SEO.
